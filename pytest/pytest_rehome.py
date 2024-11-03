@@ -29,7 +29,7 @@ def access_token(app):
         user_data = {
             "user_id": "131313131313131313131313",
             "username": "Nick Tester",
-            "email": "pytest1313131331@gmail.com",
+            "email": "thingsharad@tech.com",
             "password": generate_password_hash("NickTester123"),  # Hash the password
             "profile_picture": "http://example.com/profile.jpg",
             "postcode": "12345",
@@ -42,7 +42,7 @@ def access_token(app):
 def test_register_user(client):
     response = client.post("/api/rehome/users", json={
         "username": "Nick Tester",
-        "email": "pytest1313131331@gmail.com",
+        "email": "thingsharad@tech.com",
         "password": "NickTester123",
         "profile_picture": "http://example.com/profile.jpg",
         "postcode": "12345",
@@ -54,7 +54,7 @@ def test_register_user(client):
 # Test case for user login
 def test_login(client):
     response = client.post("/api/rehome/login", json={
-        "email": "pytest1313131331@gmail.com",
+        "email": "thingsharad@tech.com",
         "password": "NickTester123"
     })
     assert response.status_code == 200

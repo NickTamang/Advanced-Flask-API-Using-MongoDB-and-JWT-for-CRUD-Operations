@@ -1,0 +1,162 @@
+[
+    {
+        "item_id": "671864c3cfa9fe914f0f69a8",
+        "user_id": "671864c2cfa9fe914f0f69a4",
+        "item_name": "Item 0",
+        "description": "Description for item 0",
+        "photo_url": "https://example.com/item0.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69a9",
+        "user_id": "671864c0cfa9fe914f0f6997",
+        "item_name": "Item 1",
+        "description": "Description for item 1",
+        "photo_url": "https://example.com/item1.jpg",
+        "status": "taken"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69aa",
+        "user_id": "671864bfcfa9fe914f0f6996",
+        "item_name": "Item 2",
+        "description": "Description for item 2",
+        "photo_url": "https://example.com/item2.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69ab",
+        "user_id": "671864c0cfa9fe914f0f6999",
+        "item_name": "Item 3",
+        "description": "Description for item 3",
+        "photo_url": "https://example.com/item3.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69ac",
+        "user_id": "671864c1cfa9fe914f0f699d",
+        "item_name": "Item 4",
+        "description": "Description for item 4",
+        "photo_url": "https://example.com/item4.jpg",
+        "status": "taken"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69ad",
+        "user_id": "671864c0cfa9fe914f0f6999",
+        "item_name": "Item 5",
+        "description": "Description for item 5",
+        "photo_url": "https://example.com/item5.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69ae",
+        "user_id": "671864bfcfa9fe914f0f6996",
+        "item_name": "Item 6",
+        "description": "Description for item 6",
+        "photo_url": "https://example.com/item6.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69af",
+        "user_id": "671864c2cfa9fe914f0f69a4",
+        "item_name": "Item 7",
+        "description": "Description for item 7",
+        "photo_url": "https://example.com/item7.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69b0",
+        "user_id": "671864c1cfa9fe914f0f699e",
+        "item_name": "Item 8",
+        "description": "Description for item 8",
+        "photo_url": "https://example.com/item8.jpg",
+        "status": "taken"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69b1",
+        "user_id": "671864bfcfa9fe914f0f6994",
+        "item_name": "Item 9",
+        "description": "Description for item 9",
+        "photo_url": "https://example.com/item9.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69b2",
+        "user_id": "671864bfcfa9fe914f0f6996",
+        "item_name": "Item 10",
+        "description": "Description for item 10",
+        "photo_url": "https://example.com/item10.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69b3",
+        "user_id": "671864bfcfa9fe914f0f6996",
+        "item_name": "Item 11",
+        "description": "Description for item 11",
+        "photo_url": "https://example.com/item11.jpg",
+        "status": "taken"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69b4",
+        "user_id": "671864c0cfa9fe914f0f699a",
+        "item_name": "Item 12",
+        "description": "Description for item 12",
+        "photo_url": "https://example.com/item12.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69b5",
+        "user_id": "671864c2cfa9fe914f0f69a5",
+        "item_name": "Item 13",
+        "description": "Description for item 13",
+        "photo_url": "https://example.com/item13.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69b6",
+        "user_id": "671864c3cfa9fe914f0f69a7",
+        "item_name": "Item 14",
+        "description": "Description for item 14",
+        "photo_url": "https://example.com/item14.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69b7",
+        "user_id": "671864c0cfa9fe914f0f6998",
+        "item_name": "Item 15",
+        "description": "Description for item 15",
+        "photo_url": "https://example.com/item15.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69b8",
+        "user_id": "671864c1cfa9fe914f0f699d",
+        "item_name": "Item 16",
+        "description": "Description for item 16",
+        "photo_url": "https://example.com/item16.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69b9",
+        "user_id": "671864c0cfa9fe914f0f699b",
+        "item_name": "Item 17",
+        "description": "Description for item 17",
+        "photo_url": "https://example.com/item17.jpg",
+        "status": "taken"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69ba",
+        "user_id": "671864c2cfa9fe914f0f69a5",
+        "item_name": "Item 18",
+        "description": "Description for item 18",
+        "photo_url": "https://example.com/item18.jpg",
+        "status": "available"
+    },
+    {
+        "item_id": "671864c3cfa9fe914f0f69bb",
+        "user_id": "671864c3cfa9fe914f0f69a6",
+        "item_name": "Item 19",
+        "description": "Description for item 19",
+        "photo_url": "https://example.com/item19.jpg",
+        "status": "taken"
+    }
+]
