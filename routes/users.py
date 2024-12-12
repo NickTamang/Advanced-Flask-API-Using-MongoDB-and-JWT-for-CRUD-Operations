@@ -7,7 +7,7 @@ from models.some_utility import insert_user, update_user, delete_user, users_col
 
 
 # Route to register a new user
-@users_bp.route("/api/rehome/users", methods=["POST"])
+@users_bp.route("/api/rehome/signup", methods=["POST"])
 def register_user():
     try:
         data = request.json
@@ -22,7 +22,8 @@ def register_user():
             "password": generate_password_hash(data['password']),
             "profile_picture": data.get('profile_picture'),  # Use .get() to handle missing keys
             "postcode": data.get('postcode'),
-            "phone_number": data.get('phone_number')
+            "phone_number": data.get('phone_number') ,   
+            "items": [] # Initialize an empty list for the user's items
         }
         # Insert the new user into the database
         user_id, success = insert_user(user)

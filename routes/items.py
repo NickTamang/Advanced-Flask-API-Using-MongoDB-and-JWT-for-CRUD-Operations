@@ -4,22 +4,24 @@ from bson import ObjectId
 from . import items_bp
 from models.some_utility import insert_item, get_items, get_item_by_id, update_item, delete_item, get_items_by_partial_name
 
-# Route to share a new item
+#done Route to share a new item
 @items_bp.route("/api/rehome/items", methods=["POST"])
 @jwt_required()
 def share_item():
     try:
         # Handle sharing a new item
         data = request.json
+        user_id = get_jwt_identity()  # Get the user ID from the JWT token
         item = {
             "item_id": str(ObjectId()),
-            "user_id": get_jwt_identity(),
+            "user_id": user_id,
             "item_name": data['item_name'],
             "description": data['description'],
             "photo_url": data['photo_url'],
-            "status": data['status']
+            "status": data['status'],
+            "comments": []  # Initialize with an empty list of comments
         }
-        item_id, success = insert_item(item)
+        item_id, success = insert_item(user_id, item)  # Pass user_id to associate the item with the user
         if success:
             return make_response(jsonify({'status': 'success', 'item_id': item_id}), 201)
         else:
@@ -70,7 +72,6 @@ def get_item_route(item_id):
 @items_bp.route("/api/rehome/items/name/<item_name_prefix>", methods=["GET"])
 def get_items_by_partial_name_route(item_name_prefix):
     try:
-        # Handle fetching items by partial name match
         items, success = get_items_by_partial_name(item_name_prefix)
         if success:
             for item in items:
@@ -80,8 +81,9 @@ def get_items_by_partial_name_route(item_name_prefix):
         else:
             return make_response(jsonify({'status': 'error', 'message': 'Failed to retrieve items'}), 500)
     except Exception as e:
-        return make_response(jsonify({'status': 'error', 'message': str(e)}), 500) 
+        return make_response(jsonify({'status': 'error', 'message': str(e)}), 500)
 
+    
 # Route to update the status of an item
 @items_bp.route("/api/rehome/items/<item_id>", methods=["PATCH"])
 @jwt_required()

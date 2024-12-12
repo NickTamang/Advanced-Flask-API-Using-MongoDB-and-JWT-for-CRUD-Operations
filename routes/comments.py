@@ -3,9 +3,9 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 from bson import ObjectId
 from datetime import datetime
 from . import comments_bp
-from models.some_utility import insert_comment, get_comments, update_comment, delete_comment
+from models.some_utility import insert_comment, get_comments, update_comment, delete_comment, get_comments_by_item_id
 
-# Route to add a new comment
+#done Route to add a new comment according to item_id
 @comments_bp.route("/api/rehome/comments", methods=["POST"])
 @jwt_required()
 def add_comment():
@@ -34,7 +34,7 @@ def add_comment():
             return make_response(jsonify({'status': 'error', 'message': 'Failed to add comment'}), 500)
     except Exception as e:
         return make_response(jsonify({'status': 'error', 'Something went Wrong': str(e)}), 500)
-
+'''
 # Route to get comments with pagination
 @comments_bp.route("/api/rehome/comments", methods=["GET"])
 @jwt_required()
@@ -59,8 +59,21 @@ def get_comments_route():
         else:
             return make_response(jsonify({'status': 'error', 'message': 'Failed to retrieve comments'}), 500)
     except Exception as e:
-        return make_response(jsonify({'status': 'error', 'message': str(e)}), 500)
+        return make_response(jsonify({'status': 'error', 'message': str(e)}), 500) '''
 
+@comments_bp.route("/api/rehome/comments/<item_id>", methods=["GET"])
+@jwt_required()
+def get_comments(item_id):
+    try:
+        # Retrieve the comments from the database
+        comments, success = get_comments_by_item_id(item_id)
+        if success:
+            return make_response(jsonify(comments), 200)
+        else:
+            return make_response(jsonify({'status': 'error', 'message': 'Comments not found'}), 404)
+    except Exception as e:
+        return make_response(jsonify({'status': 'error', 'message': str(e)}), 500)
+    
 # Route to edit an existing comment
 @comments_bp.route("/api/rehome/comments/<comment_id>", methods=["PUT"])
 @jwt_required()

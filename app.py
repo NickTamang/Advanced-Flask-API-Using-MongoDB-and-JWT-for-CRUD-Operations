@@ -4,10 +4,14 @@ from pymongo import MongoClient
 from config import Config
 from routes import auth_bp, users_bp, items_bp, comments_bp
 from token_utils import check_if_token_in_blacklist
+from flask_cors import CORS
 
 # Initialize the Flask application
 app = Flask(__name__)
 app.config.from_object(Config)
+
+# Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "http://localhost:4200"}})
 
 # Initialize the JWT Manager with the Flask app
 jwt = JWTManager(app)
@@ -24,6 +28,10 @@ except Exception as e:
 @jwt.token_in_blocklist_loader
 def check_if_token_in_blocklist(jwt_header, jwt_payload):
     return check_if_token_in_blacklist(jwt_header, jwt_payload)
+
+@app.route('/')
+def landing_page():
+    return jsonify(message="The server is running!")
 
 # Register blueprints for different routes
 app.register_blueprint(auth_bp)
