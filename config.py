@@ -13,7 +13,10 @@ class Config:
     MONGO_URI = os.getenv('MONGO_URI')
     
     # Access token expiration time (short-lived)
-    JWT_ACCESS_TOKEN_EXPIRES = timedelta(minutes=60)
+    JWT_ACCESS_TOKEN_EXPIRES = timedelta(minutes=220)
     
     # Refresh token expiration time (long-lived)
     JWT_REFRESH_TOKEN_EXPIRES = timedelta(days=7)
+
+    # Google OAuth 2.0 client ID
+    GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
